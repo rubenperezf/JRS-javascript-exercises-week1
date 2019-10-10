@@ -188,6 +188,16 @@ function reverseString(string) {
 console.log(reverseString("hola"));
 //24) Write a function that counts the occurences of a specific element in an array, specified as a function argument.
 //For example, for the array [5,7,12,5,3,3,5], the function countOccurences(3) would return a value of 2.
+let array = [5,7,12,5,3,3,5,3,3];
+function ocurrences (num) {
+    var count = 0;
+    for (let i =0; i<array.length; i++) {
+        if(array[i]===num) {
+            count++
+        } 
+    } return count;
+}
+console.log(ocurrences(3));
 
 //25) Write a function that returns a multidimensional array that contains number of occurences for every element of an array.
 //For example, for the array [5,7,12,5,3,3,5], the function countAllOccurences(array) would return: [[5,3],[7,1],[12,1],[3,2]]
