@@ -170,6 +170,15 @@ console.log(largestInteger());
 
 //22) Write a function that returns the largest integer n where n*n is still less than a given argument.
 //Ex. smallestN(5) would return 2, because 2*2 is 4, which is smaller than 5, but 3*3 is 9, which is larger than 5. 
+function largestInterger(num) {
+  let n =1;
+  let count = 0;
+  while(n*n<=num) {
+      count = n;
+      n++;
+  } return count;
+} 
+console.log(largestInterger(5));
 
 //23) Write a function that takes a string as an argument and returns the reverse of that string.
 
@@ -204,7 +213,21 @@ console.log(ocurrences(3));
 
 //26) Write a function that takes an array of numbers as an input, and checks to see if the array is sorted in non-decreasing order. (i.e. each element in the array is less than or equal to the next element.)
 
+
 //27) Write a function that takes an array of numbers as an argument and sorts them in increasing order.
+function increasing(array) {
+    
+  for(let i=0; i<array.length;i++) {
+      for(let j=0; j<i;j++) {
+          if (array[i] < array[j]) {
+         let temp = array[i] 
+          array[i] = array[j];
+          array[j] = temp;
+           }
+       }
+   } return array;
+}
+console.log(increasing([10,2,6,4,89,8,9]));
 
 //28) Write a function that takes two sorted arrays of numbers as arguments, and returns one new sorted array containing the numbers from both of the arrays given as arguments. Call this function merge().
 
