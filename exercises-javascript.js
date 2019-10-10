@@ -92,6 +92,16 @@ console.log(increaseNumbers(90,7,100));
 //14) Write a function that returns the appropriate boolean value if a given string argument is a palindrome, where the string is the same when reversed. Examples of palindromes are "racecar" and "3003".
 //Ex: isPalindrome("racecar") returns true. isPalindrome("racecars") returns false.
 
+function isPalindrome (string) {
+  for(i=0; i<string.length;i++) {
+      if(string[i]=== string[string.length-i-1]) {
+      } else {
+          return false;
+      }
+  } return true;
+}
+console.log(isPalindrome("racertrtrcar"));
+
 //15) Write a function that returns true when two inputs are equivalent when using coercion, but not equivalent without coercion.
 //Ex: isCoerced(5,"5") returns true. isCoerced(5,5) returns false. isCoerced(4,"shoe") returns false.
 function isCoerced(a,b) {
