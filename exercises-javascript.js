@@ -71,7 +71,24 @@ return monthNames[number];
 console.log(getMonth());
 
 //13) Write a function that takes three numbers as arguments, and returns the same 3 numbers in increasing order (more specifically, non-decreasing order if multiple numbers are the same).
+function increaseNumbers(num1,num2, num3) {
+  if(num1>num2 &&num1>num3 && num2>num3) {
+      return ([num1,num2,num3])
+  } else if (num1>num2 &&num1>num3 && num3>num2) {
+      return ([num1,num3,num2]);
+  } else if (num2>num1 &&num2>num3 && num1>num3) {
+      return ([num2,num1,num3]);
+  } else if (num2>num1 &&num2>num3 && num3>num1) {
+      return ([num2,num3,num1]);
+  } else if (num3>num1 &&num3>num2 && num1>num2) {
+      return ([num3,num1,num2]);
+  } else {
+      return ([num3, num2, num1])
+  }
+}
 
+
+console.log(increaseNumbers(90,7,100));
 //14) Write a function that returns the appropriate boolean value if a given string argument is a palindrome, where the string is the same when reversed. Examples of palindromes are "racecar" and "3003".
 //Ex: isPalindrome("racecar") returns true. isPalindrome("racecars") returns false.
 
@@ -143,14 +160,47 @@ function smallestNumber() {
 console.log(smallestNumber());
 
 //21) Write a function that returns the largest integer n where n*n is still less than 12,000. (Hint 1, use a while loop). (Hint 2, you don't need an argument)
+function largestInteger () {
+  let n=0;
+  while(n*n<=12000) {
+    n++;
+  } return n
+}
+console.log(largestInteger());
 
 //22) Write a function that returns the largest integer n where n*n is still less than a given argument.
 //Ex. smallestN(5) would return 2, because 2*2 is 4, which is smaller than 5, but 3*3 is 9, which is larger than 5. 
 
 //23) Write a function that takes a string as an argument and returns the reverse of that string.
+
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+console.log(reverseString("hello"));
+
 function reverseString(string) {
-  for(let i=string.length;i=0;i--) {
-    return string[i];
-  }
+  let reverse="";
+  for(let i=string.length-1;i>=0;i--) {
+    reverse = reverse+string[i];
+  } return reverse;
 }
 console.log(reverseString("hola"));
+//24) Write a function that counts the occurences of a specific element in an array, specified as a function argument.
+//For example, for the array [5,7,12,5,3,3,5], the function countOccurences(3) would return a value of 2.
+
+//25) Write a function that returns a multidimensional array that contains number of occurences for every element of an array.
+//For example, for the array [5,7,12,5,3,3,5], the function countAllOccurences(array) would return: [[5,3],[7,1],[12,1],[3,2]]
+
+//26) Write a function that takes an array of numbers as an input, and checks to see if the array is sorted in non-decreasing order. (i.e. each element in the array is less than or equal to the next element.)
+
+//27) Write a function that takes an array of numbers as an argument and sorts them in increasing order.
+
+//28) Write a function that takes two sorted arrays of numbers as arguments, and returns one new sorted array containing the numbers from both of the arrays given as arguments. Call this function merge().
+
+//29) Leibniz's formula can compute pi. the formula is given below:
+//pi = 4 * (1 - (1/3) + (1/5) - (1/7) + (1/9) - (1/11) + ...).
+//The elipsis (the three dots) means this pattern continues forever.
+//Notice that the operators ( + and - ) alternate each time.
+//Write a function called calculatePi(), that takes an argument that specifies the number of terms to calculate from (don't include the 4 in the count) with this formula and returns the value. For example if you said:
+//Ex. calculatePi(5) would return the result of the first 5 terms in the parentheses, meaning 1 through (1/9) in this case.
