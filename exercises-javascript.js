@@ -60,6 +60,14 @@ console.log(dateTime);
 //10) Write a function that returns the date 33 days from now.
 
 //11) Write a function that returns the mean of an array of numbers.
+var arrayRuben =[1,6,7,8];
+function mean(array) {
+    var sum=0;
+    for(let i =0; i<array.length;i++) {
+        sum = sum + array[i];
+    } return sum;
+}
+console.log(mean(arrayRuben))
 
 //12) Write a function that randomly generates a number between 1 and 12, and returns the name of the corresponding month.
 const monthNames = ["January", "February", "March", "April", "May", "June",
