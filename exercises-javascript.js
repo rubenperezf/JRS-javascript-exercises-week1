@@ -1,6 +1,6 @@
 //1) Write a program that displays the result of 5+6+7+8+9+10.
 function addNumbers() {
-  return(5+6+7+8+9+10);
+  return 5+6+7+8+9+10;
 }
 console.log(addNumbers());
 
@@ -230,7 +230,17 @@ console.log(ocurrences(3));
 //For example, for the array [5,7,12,5,3,3,5], the function countAllOccurences(array) would return: [[5,3],[7,1],[12,1],[3,2]]
 
 //26) Write a function that takes an array of numbers as an input, and checks to see if the array is sorted in non-decreasing order. (i.e. each element in the array is less than or equal to the next element.)
+function order (array) {
+  for (var i = 0; i < array.length - 1; i++) {
+      if (array[i] > array[i + 1]) {
+          return false; // It is proven that the array is not sorted.
+      }
+  }
 
+  return true; // If this part has been reached, the array must be sorted.
+}
+
+console.log(order([1,8,2,3]));
 
 //27) Write a function that takes an array of numbers as an argument and sorts them in increasing order.
 function increasing(array) {
