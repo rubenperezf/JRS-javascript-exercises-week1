@@ -35,6 +35,16 @@ return ("You have to pay "+ (bill*(percentage/100) +bill).toFixed(2));
 console.log(getTip(100,10));
 
 //7) Write a function that takes a number an an argument and returns the sum of each individual digit. So an input of 998 would return 26 (because 9 + 9 + 8) is 26.
+function sumOfDigits(num){
+  var sum = 0;
+  var newString = num.toString();
+  for(i = 0; i <= newString.length - 1; i++){
+    sum += parseInt(newString[i]);
+  }
+  
+  return sum;
+}
+console.log(sumOfDigits(22))
 
 //8) Write a function that takes an argument in seconds and specifies the equivalent number of years.
 function getYears (seconds) {
@@ -61,6 +71,17 @@ function newDate () {
 
 
 //10) Write a function that returns the date 33 days from now.
+function lessDays(days) {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = today.getMonth();
+  const day = today.getDate();
+  const finalDate = new Date(year,month,day - days);
+  return finalDate;
+}
+
+
+console.log(lessDays(33)) 
 
 //11) Write a function that returns the mean of an array of numbers.
 var arrayRuben =[1,6,7,8];
