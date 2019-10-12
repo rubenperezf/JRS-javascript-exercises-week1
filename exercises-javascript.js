@@ -43,18 +43,21 @@ return (seconds/31536000).toFixed(5) + " number of years";
 console.log(getYears(1000));
 
 //8) Write the same function above, but that takes an input from the built-in browser function, prompt().
-function getYears (seconds) {
-  seconds = prompt("how many second?");
+function getYears () {
+  var seconds = prompt("how many second?");
   return((seconds/31536000).toFixed(5) + " number of years");
   }
 console.log(getYears());
 
 //9) Write a function that returns the current date and time.
-var today = new Date();
-var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-var dateTime = date+' '+time;
-console.log(dateTime);
+function newDate () {
+  var today = new Date();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var dateTime = date+' '+time;
+  console.log(dateTime);
+  } 
+  newDate();
 
 
 //10) Write a function that returns the date 33 days from now.
@@ -233,11 +236,11 @@ console.log(ocurrences(3));
 function order (array) {
   for (var i = 0; i < array.length - 1; i++) {
       if (array[i] > array[i + 1]) {
-          return false; // It is proven that the array is not sorted.
+          return false; 
       }
   }
 
-  return true; // If this part has been reached, the array must be sorted.
+  return true;
 }
 
 console.log(order([1,8,2,3]));
@@ -258,6 +261,15 @@ function increasing(array) {
 console.log(increasing([10,2,6,4,89,8,9]));
 
 //28) Write a function that takes two sorted arrays of numbers as arguments, and returns one new sorted array containing the numbers from both of the arrays given as arguments. Call this function merge().
+var arrayKatie = [1,2,3,4,5,6]
+var arrayRuben = [2,5,6,7,8,9]
+function sortedArray(array1,array2) {
+    var newArray = [];
+    newArray = array1.concat(array2);
+    return newArray.sort();
+}
+
+console.log(sortedArray(arrayKatie,arrayRuben))
 
 //29) Leibniz's formula can compute pi. the formula is given below:
 //pi = 4 * (1 - (1/3) + (1/5) - (1/7) + (1/9) - (1/11) + ...).
