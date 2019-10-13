@@ -298,3 +298,21 @@ console.log(sortedArray(arrayKatie,arrayRuben))
 //Notice that the operators ( + and - ) alternate each time.
 //Write a function called calculatePi(), that takes an argument that specifies the number of terms to calculate from (don't include the 4 in the count) with this formula and returns the value. For example if you said:
 //Ex. calculatePi(5) would return the result of the first 5 terms in the parentheses, meaning 1 through (1/9) in this case.
+function calculatedPi(num) {
+  var count =1;
+  var pi=0;
+  
+  for(let i=1; i<=num;i++) {
+      if(i%2!=0) {
+         pi = pi  + (1/count)
+         count = count +2;
+         console.log(count+ "pi+")
+      } else {
+         pi = pi - (1/count)
+         count = count +2
+         console.log(count+"pi-")
+      }
+
+  } return pi
+}
+console.log(calculatedPi(6))
