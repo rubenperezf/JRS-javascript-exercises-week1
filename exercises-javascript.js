@@ -306,11 +306,9 @@ function calculatedPi(num) {
       if(i%2!=0) {
          pi = pi  + (1/count)
          count = count +2;
-         console.log(count+ "pi+")
       } else {
          pi = pi - (1/count)
          count = count +2
-         console.log(count+"pi-")
       }
 
   } return pi
