@@ -46,6 +46,8 @@ function sumOfDigits(num){
 }
 console.log(sumOfDigits(22))
 
+
+
 //8) Write a function that takes an argument in seconds and specifies the equivalent number of years.
 function getYears (seconds) {
 return (seconds/31536000).toFixed(5) + " number of years";
@@ -92,6 +94,8 @@ function mean(array) {
     } return sum/array.length;
 }
 console.log(mean(arrayRuben))
+
+
 
 //12) Write a function that randomly generates a number between 1 and 12, and returns the name of the corresponding month.
 const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -314,3 +318,14 @@ function calculatedPi(num) {
   } return num*pi
 }
 console.log(calculatedPi(6))
+
+//30 double(array) return array doble value
+var newArray = [2,3,4];
+var newArray= newArray.map( item=>{return item*2});
+
+function doubleArray (array) {
+  return array.map( item=>{return item*2});
+}
+
+
+console.log(doubleArray(newArray));
