@@ -263,6 +263,14 @@ function ocurrences (num) {
 }
 console.log(ocurrences(3));
 
+var array = [5,7,12,5,3,3,5,3,3];
+function ocurrences (array, num) {
+  count=0;
+  var newArray = array.filter(item=>{return item===3})
+  return newArray.length;
+}
+console.log(ocurrences(array, 3))
+
 //25) Write a function that returns a multidimensional array that contains number of occurences for every element of an array.
 //For example, for the array [5,7,12,5,3,3,5], the function countAllOccurences(array) would return: [[5,3],[7,1],[12,1],[3,2]]
 
