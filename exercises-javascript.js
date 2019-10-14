@@ -311,6 +311,6 @@ function calculatedPi(num) {
          count = count +2
       }
 
-  } return pi
+  } return num*pi
 }
 console.log(calculatedPi(6))
