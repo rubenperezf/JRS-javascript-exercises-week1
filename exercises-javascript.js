@@ -2,7 +2,7 @@
 function addNumbers() {
   return 5+6+7+8+9+10;
 }
-console.log(addNumbers());
+//onsole.log(addNumbers());
 
 //2) Write a function that returns the perimeter of a rectangle with a width of 5 and a height of 8.
 function rectanglePerimeter() {
