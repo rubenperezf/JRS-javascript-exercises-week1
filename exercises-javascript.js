@@ -48,6 +48,8 @@ console.log(sumOfDigits(22))
 
 
 
+
+
 //8) Write a function that takes an argument in seconds and specifies the equivalent number of years.
 function getYears (seconds) {
 return (seconds/31536000).toFixed(5) + " number of years";
@@ -94,6 +96,7 @@ function mean(array) {
     } return sum/array.length;
 }
 console.log(mean(arrayRuben))
+
 
 
 
@@ -205,6 +208,12 @@ function smallestNumber() {
 }
 console.log(smallestNumber());
 
+var someNumbers = [3,567,6,8,34,12,23,423];
+function smallestNumber(array) {
+  return Math.min(...array) 
+}
+console.log(smallestNumber(someNumbers));
+
 //21) Write a function that returns the largest integer n where n*n is still less than 12,000. (Hint 1, use a while loop). (Hint 2, you don't need an argument)
 function largestInteger () {
   let n=0;
@@ -256,6 +265,7 @@ console.log(ocurrences(3));
 
 //25) Write a function that returns a multidimensional array that contains number of occurences for every element of an array.
 //For example, for the array [5,7,12,5,3,3,5], the function countAllOccurences(array) would return: [[5,3],[7,1],[12,1],[3,2]]
+
 
 //26) Write a function that takes an array of numbers as an input, and checks to see if the array is sorted in non-decreasing order. (i.e. each element in the array is less than or equal to the next element.)
 function order (array) {
@@ -317,7 +327,7 @@ function calculatedPi(num) {
 
   } return num*pi
 }
-console.log(calculatedPi(6))
+console.log(calculatedPi(4))
 
 //30 double(array) return array doble value
 var newArray = [2,3,4];
