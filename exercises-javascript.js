@@ -141,6 +141,8 @@ function isPalindrome (string) {
 }
 console.log(isPalindrome("racertrtrcar"));
 
+
+
 //15) Write a function that returns true when two inputs are equivalent when using coercion, but not equivalent without coercion.
 //Ex: isCoerced(5,"5") returns true. isCoerced(5,5) returns false. isCoerced(4,"shoe") returns false.
 function isCoerced(a,b) {
@@ -214,6 +216,8 @@ function smallestNumber(array) {
 }
 console.log(smallestNumber(someNumbers));
 
+
+
 //21) Write a function that returns the largest integer n where n*n is still less than 12,000. (Hint 1, use a while loop). (Hint 2, you don't need an argument)
 function largestInteger () {
   let n=0;
@@ -270,6 +274,8 @@ function ocurrences (array, num) {
   return newArray.length;
 }
 console.log(ocurrences(array, 3))
+
+
 
 //25) Write a function that returns a multidimensional array that contains number of occurences for every element of an array.
 //For example, for the array [5,7,12,5,3,3,5], the function countAllOccurences(array) would return: [[5,3],[7,1],[12,1],[3,2]]
