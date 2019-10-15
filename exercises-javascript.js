@@ -6,7 +6,7 @@ function addNumbers() {
 
 //2) Write a function that returns the perimeter of a rectangle with a width of 5 and a height of 8.
 function rectanglePerimeter() {
-return((5*8) + " is the perimeter of this rectangle.");
+return((5*9) + " is the perimeter of this rectangle.");
 }
 console.log(rectanglePerimeter());
 
