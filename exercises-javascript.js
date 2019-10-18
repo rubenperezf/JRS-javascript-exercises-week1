@@ -168,6 +168,11 @@ function isCoerced(a,b) {
 }
 console.log(isEven(44));
 
+function isEven2(number) {
+  return number%2 ===0
+}
+console.log(isEven2(45));
+
 //17) Write a function called isOdd() that returns true if a given argument is odd. Do this by only using the isEven() function you wrote previously.
 function isOdd(number) {
   if(isEven(number)===true){
@@ -279,6 +284,26 @@ console.log(ocurrences(array, 3))
 
 //25) Write a function that returns a multidimensional array that contains number of occurences for every element of an array.
 //For example, for the array [5,7,12,5,3,3,5], the function countAllOccurences(array) would return: [[5,3],[7,1],[12,1],[3,2]]
+function countAllOccurences(array) {
+  var arrayA = [], arrayB = [], prev;
+  var newArray=[]
+
+
+  array.sort();
+  for ( var i = 0; i < array.length; i++ ) {
+      if ( array[i] !== prev ) {
+          arrayA.push(array[i]);
+          arrayB.push(1);
+      } else {
+          arrayB[arrayB.length-1]++;
+      }
+      prev = array[i];
+  }
+
+ 
+  return newArray = arrayA.map((e, i) => [e, arrayB[i]]);
+}
+console.log(countAllOccurences([5,7,12,5,3,3,5]))
 
 
 //26) Write a function that takes an array of numbers as an input, and checks to see if the array is sorted in non-decreasing order. (i.e. each element in the array is less than or equal to the next element.)
