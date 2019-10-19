@@ -284,7 +284,7 @@ console.log(smallestNumber3(someNumbers));
 function largestInteger () {
   let n=0;
   let count =0;
-  while(n*n<=12000) {
+  while(n*n<=4) {
     count =n;
     n++;
   } return count;
@@ -316,6 +316,7 @@ function largestInterger(num) {
       n++;
   } return count;
 } 
+
 console.log(largestInterger(5));
 
 //23) Write a function that takes a string as an argument and returns the reverse of that string.
