@@ -247,17 +247,39 @@ console.log(checkMultiple2(21,5))
 
 //20) Write a function that takes an array of numbers as an argument and returns the smallest number in the array.
 
-var someNumbers = [3,567,6,8,34,12,23,423];
-function smallestNumber() {
-  return Math.min.apply(null, someNumbers) 
-}
-console.log(smallestNumber());
 
-var someNumbers = [3,567,6,8,34,12,23,423];
 function smallestNumber(array) {
   return Math.min(...array) 
 }
+
+var someNumbers = [567,6,8,34,12,23,423];
 console.log(smallestNumber(someNumbers));
+
+function smallestNumber2(array) {
+  for(let i=0; i<array.length;i++) {
+      for(let j=0; j<i;j++) {
+          if (array[i] < array[j]) {
+         let temp = array[i] 
+          array[i] = array[j];
+          array[j] = temp;
+          }
+      }
+  } return array[0]
+}
+
+
+var someNumbers = [567,6,8,34,12,23,423];
+console.log(smallestNumber2(someNumbers))
+
+function smallestNumber3(array) {
+  return Math.min.apply(null, array) 
+}
+
+var someNumbers = [567,6,8,34,12,23,423];
+console.log(smallestNumber3(someNumbers));
+
+
+
 
 
 
