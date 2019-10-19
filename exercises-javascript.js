@@ -283,10 +283,11 @@ console.log(smallestNumber3(someNumbers));
 
 function largestInteger () {
   let n=0;
+  let count =0;
   while(n*n<=12000) {
+    count =n;
     n++;
-    console.log(n)
-  } return n
+  } return n-1
 }
 
 console.log(largestInteger());
@@ -294,17 +295,19 @@ console.log(largestInteger());
 
 function largestInterger2 () {
   let n=0;
+  let count =0;
   do {
+    count=n;
     n++
-    console.log(n)
   } while (n*n<=12000)
-  return n
+  return count
 }
 
 console.log(largestInterger2())
 
 //22) Write a function that returns the largest integer n where n*n is still less than a given argument.
 //Ex. smallestN(5) would return 2, because 2*2 is 4, which is smaller than 5, but 3*3 is 9, which is larger than 5. 
+
 function largestInterger(num) {
   let n =1;
   let count = 0;
