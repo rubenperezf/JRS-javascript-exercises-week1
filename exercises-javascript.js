@@ -321,19 +321,22 @@ console.log(smallestN(5));
 
 //23) Write a function that takes a string as an argument and returns the reverse of that string.
 
-
-function reverseString(str) {
-  return str.split("").reverse().join("");
-}
-console.log(reverseString("hello"));
-
-function reverseString(string) {
+function reverseString2(string) {
   let reverse="";
   for(let i=string.length-1;i>=0;i--) {
     reverse = reverse+string[i];
   } return reverse;
 }
-console.log(reverseString("hola"));
+
+console.log(reverseString2("hola"));
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+console.log(reverseString("hello"));
+
+
 //24) Write a function that counts the occurences of a specific element in an array, specified as a function argument.
 //For example, for the array [5,7,12,5,3,3,5], the function countOccurences(3) would return a value of 2.
 let array = [5,7,12,5,3,3,5,3,3];
