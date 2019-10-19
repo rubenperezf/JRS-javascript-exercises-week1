@@ -1,8 +1,8 @@
 //1) Write a program that displays the result of 5+6+7+8+9+10.
 function addNumbers() {
-  return 5+6+7+8+9+10;
+  console.log(5+6+7+8+9+10);
 }
-//onsole.log(addNumbers());
+addNumbers()
 
 //2) Write a function that returns the perimeter of a rectangle with a width of 5 and a height of 8.
 function rectanglePerimeter() {
@@ -69,23 +69,19 @@ function newDate () {
   var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
   var dateTime = date+' '+time;
-  console.log(dateTime);
+  return dateTime;
   } 
-  newDate();
+  console.log(newDate());
 
 
 //10) Write a function that returns the date 33 days from now.
-function lessDays(days) {
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = today.getMonth();
-  const day = today.getDate();
-  const finalDate = new Date(year,month,day - days);
-  return finalDate;
+
+function subtractDays (days) {
+  var date= new Date();
+  date.setDate(date.getDate()-days);
+  return date
 }
-
-
-console.log(lessDays(33)) 
+console.log(subtractDays(33))
 
 //11) Write a function that returns the mean of an array of numbers.
 var arrayRuben =[1,6,7,8];
