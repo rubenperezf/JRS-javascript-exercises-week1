@@ -228,14 +228,22 @@ console.log(multipleOf32(10));
 
 //19) Write a function that takes two arguments. Check if the first argument is the multiple of the second argument. Return the appropriate boolean.
 //Ex. checkMultiple(20,5) returns true. checkMultiple(21,5) returns false.
-function multipleNumber(num1,num2) {
-  if(num2%num1===0) {
+
+function checkMultiple (num1,num2) {
+  if(num1%num2===0) {
     return true;
   } else {
     return false;
   }
 }
-console.log(multipleNumber(2,9));
+
+console.log(checkMultiple(8,2));
+
+function checkMultiple2 (num1,num2) {
+  return num1%num2===0
+}
+
+console.log(checkMultiple2(21,5))
 
 //20) Write a function that takes an array of numbers as an argument and returns the smallest number in the array.
 
