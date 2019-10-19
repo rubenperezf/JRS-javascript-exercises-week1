@@ -85,7 +85,7 @@ console.log(subtractDays(33))
 
 //11) Write a function that returns the mean of an array of numbers.
 
-function mean(array) {
+function meanArray (array) {
     var sum=0;
     for(let i =0; i<array.length;i++) {
         sum = sum + array[i];
