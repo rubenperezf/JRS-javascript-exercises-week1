@@ -308,7 +308,7 @@ console.log(largestInterger2())
 //22) Write a function that returns the largest integer n where n*n is still less than a given argument.
 //Ex. smallestN(5) would return 2, because 2*2 is 4, which is smaller than 5, but 3*3 is 9, which is larger than 5. 
 
-function largestInterger(num) {
+function smallestN(num) {
   let n =1;
   let count = 0;
   while(n*n<=num) {
@@ -317,7 +317,7 @@ function largestInterger(num) {
   } return count;
 } 
 
-console.log(largestInterger(5));
+console.log(smallestN(5));
 
 //23) Write a function that takes a string as an argument and returns the reverse of that string.
 
