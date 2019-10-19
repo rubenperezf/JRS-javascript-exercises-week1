@@ -339,8 +339,9 @@ console.log(reverseString2("hello"));
 
 //24) Write a function that counts the occurences of a specific element in an array, specified as a function argument.
 //For example, for the array [5,7,12,5,3,3,5], the function countOccurences(3) would return a value of 2.
-let array = [5,7,12,5,3,3,5,3,3];
-function ocurrences (num) {
+
+
+function ocurrences (array,num) {
     var count = 0;
     for (let i =0; i<array.length; i++) {
         if(array[i]===num) {
@@ -348,15 +349,17 @@ function ocurrences (num) {
         } 
     } return count;
 }
-console.log(ocurrences(3));
+let rubenArray = [5,7,12,5,3,3,5,3,3];
+console.log(ocurrences(rubenArray,3));
 
-var array = [5,7,12,5,3,3,5,3,3];
-function ocurrences (array, num) {
+
+function ocurrences2 (array, num) {
   count=0;
   var newArray = array.filter(item=>{return item===3})
   return newArray.length;
 }
-console.log(ocurrences(array, 3))
+var array = [5,7,12,5,3,3,5,3,3];
+console.log(ocurrences2(array, 3))
 
 
 
