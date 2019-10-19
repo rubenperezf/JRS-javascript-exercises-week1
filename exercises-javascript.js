@@ -421,15 +421,34 @@ var rubenArray = [10,2,6,4,89,8,9]
 console.log(increasing(rubenArray));
 
 //28) Write a function that takes two sorted arrays of numbers as arguments, and returns one new sorted array containing the numbers from both of the arrays given as arguments. Call this function merge().
-var arrayKatie = [1,2,3,4,5,6]
-var arrayRuben = [2,5,6,7,8,9]
-function sortedArray(array1,array2) {
+
+function merge(array1,array2) {
     var newArray = [];
     newArray = array1.concat(array2);
-    return newArray.sort();
+    return newArray.sort()
 }
 
-console.log(sortedArray(arrayKatie,arrayRuben))
+var arrayKatie = [1,2,3,4,5,6]
+var arrayRuben = [20,5,6,7,8,9]
+console.log(merge(arrayKatie,arrayRuben))
+
+function merge2(array1,array2) {
+  var newArray = [];
+  newArray = array1.concat(array2);
+  for(let i=0; i<newArray.length;i++) {
+    for(let j=0; j<i;j++) {
+        if (newArray[i] < newArray[j]) {
+        let temp = newArray[i] 
+        newArray[i] = newArray[j];
+        newArray[j] = temp;
+        }
+    }
+  } return newArray;
+}
+
+var arrayKatie = [1,2,3,4,5,6]
+var arrayRuben = [20,5,6,7,8,9]
+console.log(merge2(arrayKatie,arrayRuben))
 
 //29) Leibniz's formula can compute pi. the formula is given below:
 //pi = 4 * (1 - (1/3) + (1/5) - (1/7) + (1/9) - (1/11) + ...).
