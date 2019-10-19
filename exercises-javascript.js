@@ -403,6 +403,7 @@ function order (array) {
 console.log(order([1,2,3]));
 
 //27) Write a function that takes an array of numbers as an argument and sorts them in increasing order.
+
 function increasing(array) {
     
   for(let i=0; i<array.length;i++) {
@@ -415,6 +416,7 @@ function increasing(array) {
       }
   } return array;
 }
+
 var rubenArray = [10,2,6,4,89,8,9]
 console.log(increasing(rubenArray));
 
