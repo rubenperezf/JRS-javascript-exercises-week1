@@ -476,12 +476,10 @@ function calculatedPi(num) {
 console.log(calculatedPi(4))
 
 //30 double(array) return array doble value
-var newArray = [2,3,4];
-var newArray= newArray.map( item=>{return item*2});
 
 function doubleArray (array) {
   return array.map( item=>{return item*2});
 }
 
-
+var newArray = [2,3,4];
 console.log(doubleArray(newArray));
