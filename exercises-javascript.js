@@ -287,7 +287,7 @@ function largestInteger () {
   while(n*n<=12000) {
     count =n;
     n++;
-  } return n-1
+  } return count;
 }
 
 console.log(largestInteger());
@@ -300,7 +300,7 @@ function largestInterger2 () {
     count=n;
     n++
   } while (n*n<=12000)
-  return count
+  return count;
 }
 
 console.log(largestInterger2())
