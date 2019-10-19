@@ -84,22 +84,25 @@ function subtractDays (days) {
 console.log(subtractDays(33))
 
 //11) Write a function that returns the mean of an array of numbers.
-var arrayRuben =[1,6,7,8];
+
 function mean(array) {
     var sum=0;
     for(let i =0; i<array.length;i++) {
         sum = sum + array[i];
-    } return sum/array.length;
+    } return sum/array.length
 }
+
+var arrayRuben =[1,6,7,8];
 console.log(mean(arrayRuben))
 
 
 
 
 //12) Write a function that randomly generates a number between 1 and 12, and returns the name of the corresponding month.
+
+function getMonth() {
 const monthNames = ["January", "February", "March", "April", "May", "June",
 "July", "August", "September", "October", "November", "December"];
-function getMonth() {
 var number = (Math.floor(Math.random()*12));
 return monthNames[number];
 }
